@@ -1,0 +1,117 @@
+.profile {
+    max-width: 880px;
+    width: 100%;
+    display: grid;
+    padding-top: 3%;
+    grid-template-columns: 120px 415px 1fr;
+}
+
+.profile__info {
+    display: grid;
+    grid-template-columns: 373px 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    margin: 5% 0 5% 5%;
+    row-gap: 15px;
+}
+
+.profile__name {
+    max-width: 373px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 114%;
+    margin: 0;
+}
+
+.profile__description {
+    max-width: 415px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+}
+
+.profile_avatar {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+}
+
+.profile__editbutton {
+    align-self: center;
+}
+
+.profile__editbutton:hover {
+    opacity: 50%;
+}
+
+.profile__addbutton {
+    justify-self: end;
+    margin: 10% 0 0;
+    display: flex;
+}
+
+.profile__new-picture {
+    width: 100%;
+}
+
+.profile__addbutton:hover {
+    opacity: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+    .profile {
+        grid-template-columns: 120px 1fr;
+        grid-template-rows: 1fr 60px;
+        width: 580px;
+    }
+
+    .profile__addbutton {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 580px;
+        margin: 0;
+    }
+    
+}
+
+@media screen and (max-width: 590px) {
+    .profile {
+        grid-template-columns: 320px;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 282px;
+        justify-items: center;
+    }
+
+    .profile__info {
+        grid-column: 1;
+        grid-row: 2;
+        grid-template-columns: 196px 1fr;
+    }
+
+    .profile__addbutton {
+        grid-column: 1;
+        grid-row: 3;
+        width: 282px;
+    }
+
+    .profile__name {
+        width: 196px;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 27px;
+        text-align: center;
+    }
+
+    .profile__editbutton {
+        width: 18px;
+    }
+
+    .profile__description {
+        grid-column: span 2;
+        text-align: center;
+    }
+}
