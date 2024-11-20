@@ -2,12 +2,25 @@
     padding: 60px 0;
     width: 100%;
     max-width: 880px;
+    min-width: 270px;
     color: #545454;
     display: flex;
 }
 
 @media screen and (max-width: 1024px) {
     .footer {
-        width: 580px;
+        max-width: 580px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .footer {
+    width: 100%;
+    max-width: 282px;
+    }
+
+    .footer__paragraph {
+        font-size: 14px;
     }
 }

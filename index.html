@@ -145,6 +145,30 @@
         <footer class="footer">
             <p class="footer__paragraph">© 2024. Gabriel Ruiz (Around the U.S.A.)</p>
         </footer>
+        <div class="popup__container">
+                <form class="popup">
+                        <h4 class="popup__title">Editar perfil</h4>
+                                <input 
+                                    type="text" 
+                                    placeholder="Nombre" 
+                                    class="popup__input popup__input-name"
+                                >
+                                <input
+                                    type="text"
+                                    placeholder="Acerca de mi"
+                                    class="popup__input popup__input-description"
+                                >
+                                <button type="submit" class="popup__button" disabled>Guardar</button>
+                                <figure class="popup__close">
+                                    <img 
+                                        src="./images/Close Icon.svg" 
+                                        alt="Boton para cerrar la Edicion"
+                                        class="popup__close-button"
+                                        >
+                                </figure>
+                </form>
+        </div>
     </main>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

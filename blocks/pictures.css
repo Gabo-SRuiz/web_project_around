@@ -4,7 +4,7 @@
     grid-template-rows: repeat(2, 1fr);
     gap: 2%;
     max-width: 880px;
-    min-width: 320px;
+    min-width: 282px;
     width: 100%;
     height: auto;
     padding-top: 3%;
@@ -12,7 +12,7 @@
 }
 
 .pictures__item {
-    width: 282px;
+    width: 100%;
     border-radius: 5%;
     background-color: #fff;
 }
@@ -27,8 +27,7 @@
 }
 
 .pictures__footer {
-    width: 248px;
-    height: auto;
+    max-width: 248px;
     display: flex;
     justify-content: space-between;
     background-color: #fff;
@@ -49,21 +48,29 @@
     opacity: 50%;
 }
 
+.pictures__button:active {
+    background-image: url(../images/dark-heart.svg);
+    background-repeat: no-repeat;
+    background-position: 1%;
+}
+
 
 @media screen and (max-width: 1024px) {
     .pictures {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        width: 580px;
+        max-width: 580px;
+        width: 100%;
     }
 
     }
 
 @media screen and (max-width: 590px) {
     .pictures {
-        grid-template-columns: 320px;
+        grid-template-columns: 282px;
         grid-template-rows: max-content;
-        width: 320px;
+        max-width: 282px;
+        width: 100%;
         gap: .5%;
     }
 }

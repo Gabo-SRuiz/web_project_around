@@ -1,5 +1,6 @@
 .profile {
     max-width: 880px;
+    min-width: 282px;
     width: 100%;
     display: grid;
     padding-top: 3%;
@@ -37,7 +38,6 @@
 .profile_avatar {
     width: 100%;
     max-width: 120px;
-    height: auto;
 }
 
 .profile__editbutton {
@@ -66,7 +66,8 @@
     .profile {
         grid-template-columns: 120px 1fr;
         grid-template-rows: 1fr 60px;
-        width: 580px;
+        max-width: 580px;
+        width: 100%;
     }
 
     .profile__addbutton {
@@ -75,15 +76,28 @@
         width: 580px;
         margin: 0;
     }
+
+    .profile__name {
+        font-size: 38px;
+    }
+
+    .profile__description {
+        font-size: 15px;
+    }
+
+    .profile__addbutton {
+        ;
+    }
     
 }
 
 @media screen and (max-width: 590px) {
     .profile {
-        grid-template-columns: 320px;
+        grid-template-columns: 282px;
         grid-template-rows: 1fr 1fr 1fr;
-        width: 282px;
         justify-items: center;
+        width: 100%;
+        max-width: 282px;
     }
 
     .profile__info {
