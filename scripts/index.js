@@ -26,7 +26,7 @@ function handleFormSubmit(event) {
 form.addEventListener("submit", handleFormSubmit);
 
 
-function abledButton() {
+function fieldChecker() {
     let validName = inputName.value.trim() !=="";
     let validDescription = inputDescription.value.trim() !=="";
 
@@ -39,6 +39,6 @@ function abledButton() {
     }
 }
 
-inputName.addEventListener("input", abledButton);
-inputDescription.addEventListener("input", abledButton);
+inputName.addEventListener("input", fieldChecker);
+inputDescription.addEventListener("input", fieldChecker);
 
