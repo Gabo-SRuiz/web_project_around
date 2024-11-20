@@ -1,4 +1,4 @@
-.popup__container {
+.popup {
     background-color: rgba(0, 0, 0, .5);
     width: 100vw;
     height: 100vh;
@@ -16,7 +16,7 @@
     visibility: visible;
 }
 
-.popup {
+.popup__container {
     position: fixed;
     background-color: #fff;
     box-shadow: 0 0 25px #000;
