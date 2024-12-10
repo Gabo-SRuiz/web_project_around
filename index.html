@@ -51,96 +51,28 @@
         </section>
 
         <section class="pictures">
-            <div class="pictures__item">
-                <img
-                src="./images/valle de yosemite.jpg"
-                alt="Imagen del Valle de Yosemite"
-                class="pictures__image"
-                >
-                <div class="pictures__footer">
-                    <h3 class="pictures__title">Valle de Yosemite</h3>
+            <template class="pictures__template">
+                <div class="pictures__item">
                     <img
-                    src="./images/Like-button.svg"
-                    alt="Boton de like"
-                    class="pictures__button"
+                    src=""
+                    alt="Imagen del Valle de Yosemite"
+                    class="pictures__image"
                     >
-                </div>
-            </div>
-            <div class="pictures__item">
-                <img
-                src="./images/lago louise.png"
-                alt="Imagen del Valle de Yosemite"
-                class="pictures__image"
-                >
-                <div class="pictures__footer">
-                    <h3 class="pictures__title">Lago Louise</h3>
                     <img
-                    src="./images/Like-button.svg"
-                    alt="Boton de like"
-                    class="pictures__button"
+                        src="./images/Trash.svg"
+                        alt="Bote de basura"
+                        class="pictures__delete-button"
                     >
-                </div>
-            </div>
-            <div class="pictures__item">
-                <img
-                src="./images/montañas calvas.png"
-                alt="Imagen del Valle de Yosemite"
-                class="pictures__image"
-                >
-                <div class="pictures__footer">
-                    <h3 class="pictures__title">Montañas calvas</h3>
-                    <img
-                    src="./images/Like-button.svg"
-                    alt="Boton de like"
-                    class="pictures__button"
-                    >
-                </div>
-            </div>
-            <div class="pictures__item">
-                <img
-                src="./images/latemar.png"
-                alt="Imagen del Valle de Yosemite"
-                class="pictures__image"
-                >
-                <div class="pictures__footer">
-                    <h3 class="pictures__title">Latemar</h3>
-                    <img
-                    src="./images/Like-button.svg"
-                    alt="Boton de like"
-                    class="pictures__button"
-                    >
-                </div>
-            </div>
-            <div class="pictures__item">
-                <img
-                src="./images/Vanois-park.png"
-                alt="Imagen del Valle de Yosemite"
-                class="pictures__image"
-                >
-                <div class="pictures__footer">
-                    <h3 class="pictures__title">Vanois National...</h3>
-                    <img
-                    src="./images/Like-button.svg"
-                    alt="Boton de like"
-                    class="pictures__button"
-                    >
-                </div>
-            </div>
-            <div class="pictures__item">
-                <img
-                src="./images/lago di braies.png"
-                alt="Imagen del Valle de Yosemite"
-                class="pictures__image"
-                >
-                <div class="pictures__footer">
-                    <h3 class="pictures__title">Lago di Braies</h3>
-                    <img
-                    src="./images/Like-button.svg"
-                    alt="Boton de like"
-                    class="pictures__button"
-                    >
-                </div>
-            </div>
+                    <div class="pictures__footer">
+                        <h3 class="pictures__title"></h3>
+                        <img
+                        src="./images/Like-button.svg"
+                        alt="Boton de like"
+                        class="pictures__button"
+                        >
+                    </div>
+                </div>    
+            </template>
         </section>
         <footer class="footer">
             <p class="footer__paragraph">© 2024. Gabriel Ruiz (Around the U.S.A.)</p>
@@ -168,6 +100,43 @@
                                 </figure>
                 </form>
         </div>
+        <div class="form">
+            <form class="form__container">
+                    <h4 class="form__title">Nuevo lugar</h4>
+                            <input 
+                                type="text" 
+                                placeholder="Titulo" 
+                                class="form__input form__input-name"
+                            >
+                            <input
+                                type="url"
+                                placeholder="Enlace de imagen"
+                                class="form__input form__input-link"
+                            >
+                            <button type="submit" class="form__button" disabled>Crear</button>
+                            <figure class="form__xbutton">
+                                <img 
+                                    src="./images/Close Icon.svg" 
+                                    alt="Boton para cerrar la Edicion"
+                                    class="form__close-button"
+                                    >
+                            </figure>
+                </form>
+        </div>
+
+        <figure class="images">
+            <div class="images__container">
+                <img
+                    src=""
+                    alt="Imagen del Valle de Yosemite"
+                    class="images__content"
+                >
+                <p class="images__paragraph"></p>
+                <img 
+                    src="./images/Close Icon.svg" 
+                    alt="Boton para cerrar la Edicion"
+                    class="images__close-button"
+                >
     </main>
     <script src="scripts/index.js"></script>
 </body>
