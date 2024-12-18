@@ -44,5 +44,16 @@ Utilizando ".remove()" para deshacernos de las tarjetas.
 
 El popup fue implementado sustituyendo en la funcion los valores de las tarjetas para darsela al mismo.
 
+//////////////////////////////////////////////////////////////////////////////////
+
+Proyecto 9 de TripleTen
+
+En este proyecto se continuo trabajando con el mismo respositorio y pagina web de los anteriores 2 sprints. En este caso se incluyeron las validaciones de los formularios entre otros pequeños detalles como son:
+    
+    - Cerrar los popups con la tecla "Escape"
+    - Cerrar los popups haciendo click en el area que no es parte del popup (overlay)
+
+Para la validacion de los formularios utilizamos como base un objeto el cual contenia en los valores de sus claves las clases de las etiquetas correspondientes a los formularios; seguido de ello se crearon funciones que engloban la funcionalidad del validador , convirtiendo en arrays los nodos de lista de formularios y inputs; validando el contenido del input con los atributos en html y asignando clases de css para los estilos en el error y en los botones deshabilitados.
+
 Enlace del proyecto:
 https://gabo-sruiz.github.io/web_project_around/

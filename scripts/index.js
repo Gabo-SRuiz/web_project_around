@@ -1,3 +1,6 @@
+import "./validate.js"
+import { resetforms, settings } from "./validate.js";
+
 const editButton = document.querySelector(".profile__editbutton");
 const popup = document.querySelector(".popup")
 const closeButton = document.querySelector(".popup__close-button");
@@ -10,6 +13,7 @@ const saveButton = document.querySelector(".popup__button");
 const addButton = document.querySelector(".profile__new-picture");
 const cancelButton = document.querySelector(".form__xbutton");
 const confirmButton = document.querySelector(".form__button");
+const popupForm = document.querySelector(".form")
 const cardForm = document.querySelector(".form__container");
 const pictures = document.querySelector(".pictures");
 const cardName = document.querySelector(".form__input-name");
@@ -90,39 +94,21 @@ function createCard(evt) {
     evt.preventDefault();
     const cardElement = createCardElements(cardName.value, cardLink.value);
     pictures.prepend(cardElement);
-
-    cardForm.reset();
 }
 
     cardForm.addEventListener("submit", createCard);
 
-function formFieldChecker() {
-    const validName = cardName.value.trim() !=="";
-    const validLink = cardLink.value.trim() !=="";
-
-    if (validName || validLink) {
-        confirmButton.removeAttribute("disabled");
-        confirmButton.classList.add("form__save-button");
-    } else {
-        confirmButton.setAttribute("disabled", true);
-        confirmButton.classList.remove("form__save-button");
-    }
-}
-
-cardName.addEventListener("input", formFieldChecker);
-cardLink.addEventListener("input", formFieldChecker);
-
 function toggleForm() {
     popup.classList.toggle("popup__visible");
+    resetforms(settings);
 } 
-
 
 editButton.addEventListener('click', toggleForm);
 closeButton.addEventListener("click", toggleForm);
 saveButton.addEventListener("click", toggleForm);
 
 function showCardForm() {
-    cardForm.classList.toggle("form__visible");
+    popupForm.classList.toggle("form__visible");
 } 
 
 addButton.addEventListener("click", showCardForm);
@@ -133,23 +119,26 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
     profileName.textContent = inputName.value;
     profileDescription.textContent = inputDescription.value;
-
-    form.reset();
-
 });
 
-function fieldChecker() {
-    const validName = inputName.value.trim() !=="";
-    const validDescription = inputDescription.value.trim() !=="";
+document.addEventListener("click", (evt) =>{
+  if(evt.target.classList.contains("popup")){
+    evt.target.classList.remove("popup__visible")
+  }; 
+  if (evt.target.classList.contains("form")){
+      evt.target.classList.remove("form__visible")
+  };
+  if(evt.target.classList.contains("images")){
+    evt.target.classList.remove("images__visible")
+  };
+  });
 
-    if (validName || validDescription) {
-        saveButton.removeAttribute("disabled");
-        saveButton.classList.add("popup__save-button");
-    } else {
-        saveButton.setAttribute("disabled", true);
-        saveButton.classList.remove("popup__save-button");
-    }
-}
-
-inputName.addEventListener("input", fieldChecker);
-inputDescription.addEventListener("input", fieldChecker);
+  document.addEventListener("keydown", (evt) =>{
+  if(evt.key === "Escape"){
+    popup.classList.remove("popup__visible");
+    popupForm.classList.remove("form__visible");
+    
+    const images = document.querySelector(".images");
+    images.classList.remove("images__visible");
+  };
+  });
