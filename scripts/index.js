@@ -109,6 +109,7 @@ saveButton.addEventListener("click", toggleForm);
 
 function showCardForm() {
     popupForm.classList.toggle("form__visible");
+    resetforms(settings);
 } 
 
 addButton.addEventListener("click", showCardForm);
@@ -124,12 +125,15 @@ form.addEventListener("submit", (event) => {
 document.addEventListener("click", (evt) =>{
   if(evt.target.classList.contains("popup")){
     evt.target.classList.remove("popup__visible")
+    resetforms(settings);
   }; 
   if (evt.target.classList.contains("form")){
       evt.target.classList.remove("form__visible")
+      resetforms(settings);
   };
   if(evt.target.classList.contains("images")){
     evt.target.classList.remove("images__visible")
+    resetforms(settings);
   };
   });
 
@@ -140,5 +144,6 @@ document.addEventListener("click", (evt) =>{
     
     const images = document.querySelector(".images");
     images.classList.remove("images__visible");
+    resetforms(settings);
   };
   });

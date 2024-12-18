@@ -81,10 +81,11 @@ export const settings ={
   const forms = Array.from(document.querySelectorAll(classObjects.formSelector));
     
     forms.forEach((formElement) =>{
-        formElement.reset();
+
         const inputList = Array.from(formElement.querySelectorAll(classObjects.inputSelector));
         inputList.forEach((inputElement)=> {
             hideInputError(formElement, inputElement, classObjects);
+            
         })
     });
   }
