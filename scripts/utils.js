@@ -37,9 +37,9 @@ confirmButton.addEventListener("click", showCardForm);
 
 formCard.addEventListener("submit", (evt) => {
     evt.preventDefault();
-    const newCard = new Card({link: inputUrl.value, name: inputTitle.value}, ".pictures__template").getCard();
+    const newCard = new Card({name: inputTitle.value, link: inputUrl.value}, ".pictures__template").getCard();
     
-    pictures.append(newCard);
+    pictures.prepend(newCard);
 })
 
 form.addEventListener("submit", (event) => {
