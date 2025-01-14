@@ -55,5 +55,24 @@ En este proyecto se continuo trabajando con el mismo respositorio y pagina web d
 
 Para la validacion de los formularios utilizamos como base un objeto el cual contenia en los valores de sus claves las clases de las etiquetas correspondientes a los formularios; seguido de ello se crearon funciones que engloban la funcionalidad del validador , convirtiendo en arrays los nodos de lista de formularios y inputs; validando el contenido del input con los atributos en html y asignando clases de css para los estilos en el error y en los botones deshabilitados.
 
+//////////////////////////////////////////////////////////////////////////////////
+
+SPRINT 10: Introduccion a la programacion orientada a objetos 
+Proyecto 10
+
+En este proyecto se implementaron clases a nuestra pagina "Around":
+    1. Card.js
+    2. FormValidator.js
+
+Card
+Se creo esta clase para todo lo relacionado a la creacion y elementos de las tarjetas o "cards" de nuestra pagina: El template, los botones, imagenes, titulo, etc. Con ayuda de el "elemento" this.
+
+FormValidator
+Esta clase va relacionada a la funcion de las validaciones de formularios.
+
+Ambos cuentan con elementos privados y publicos y cada funcion o metodo hace una cosa.
+
+Tambien se creo el archivo utils.js el cual contiene los controladores de eventos, las constantes y las funciones para abrir y cerrar popups.
+
 Enlace del proyecto:
 https://gabo-sruiz.github.io/web_project_around/
