@@ -60,7 +60,7 @@ export class FormValidator {
             this._toggleButtonState();
           });
         });
-        this._closeButton = Array.from(document.querySelectorAll("#close-button"));
+        this._closeButton = Array.from(document.querySelectorAll(".popup__close-button"));
         this._closeButton.forEach((button) => {
           button.addEventListener("click", () => this.resetforms());
           
@@ -81,12 +81,3 @@ export class FormValidator {
           });
         }
       }
-
-export const settings = {
-  formSelector: ".popup__container",
-  inputSelector: ".popup__input",
-  submitButtonSelector: ".popup__button",
-  inactiveButtonClass: "popup__button_disabled",
-  inputErrorClass: "popup__input_type_error",
-  errorClass: "popup__error_visible",
-};

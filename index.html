@@ -77,14 +77,16 @@
         <footer class="footer">
             <p class="footer__paragraph">© 2024. Gabriel Ruiz (Around the U.S.A.)</p>
         </footer>
-        <div class="popup">
-                <form novalidate class="popup__container">
+
+        <div class="popup" id="profile-popup">
+                <form novalidate class="popup__container" id="profile-form">
                         <h4 class="popup__title">Editar perfil</h4>
                                 <input 
                                     type="text" 
                                     placeholder="Nombre" 
-                                    class="popup__input popup__input-name"
+                                    class="popup__input"
                                     id="popup__name"
+                                    name="name"
                                     required
                                     minlength="2"
                                     maxlength="40"
@@ -93,8 +95,9 @@
                                 <input
                                     type="text"
                                     placeholder="Acerca de mi"
-                                    class="popup__input popup__input-description"
+                                    class="popup__input"
                                     id="popup__description"
+                                    name="description"
                                     required
                                     minlength="2"
                                     maxlength="200"
@@ -105,20 +108,19 @@
                                     <img 
                                         src="./images/Close Icon.svg" 
                                         alt="Boton para cerrar la Edicion"
-                                        class="popup__close-button"
-                                        id="close-button"
-                                        >
+                                        class="popup__close-button"                                        >
                                 </figure>
                 </form>
         </div>
-        <div class="form popup">
-            <form novalidate class="form__container popup__container" id="Form__card">
-                    <h4 class="form__title">Nuevo lugar</h4>
+        <div class="popup" id="card-popup">
+            <form novalidate class="popup__container" id="card-form">
+                    <h4 class="popup__title">Nuevo lugar</h4>
                             <input 
                                 type="text" 
                                 placeholder="Titulo" 
-                                class="form__input form__input-name popup__input"
+                                class="popup__input"
                                 id="popup__title"
+                                name="title"
                                 required
                                 minlength="2"
                                 maxlength="30"
@@ -127,37 +129,41 @@
                             <input
                                 type="url"
                                 placeholder="Enlace de imagen"
-                                class="form__input form__input-link popup__input"
+                                class="popup__input"
                                 id="popup__url"
+                                name="link"
                                 required
                             >
                             <span class="popup__error" id="popup__url-error"></span>
                             <button type="submit" class="form__button popup__button" disabled>Crear</button>
-                            <figure class="form__xbutton">
+                            <figure class="popup__close">
                                 <img 
                                     src="./images/Close Icon.svg" 
                                     alt="Boton para cerrar la Edicion"
-                                    class="form__close-button"
-                                    id="close-button"
+                                    class="popup__close-button"
                                     >
                             </figure>
                 </form>
         </div>
 
-        <figure class="images">
-            <div class="images__container">
+        <figure class="popup" id="image-popup">
+            <div class="popup__container popup__images-container">
                 <img
                     src=""
                     alt="Imagen del Valle de Yosemite"
-                    class="images__content"
+                    class="popup__content"
                 >
-                <p class="images__paragraph"></p>
-                <img 
-                    src="./images/Close Icon.svg" 
-                    alt="Boton para cerrar la Edicion"
-                    class="images__close-button"
-                >
+                <p class="popup__paragraph"></p>
+                <figure class="popup__close">
+                    <img 
+                        src="./images/Close Icon.svg" 
+                        alt="Boton para cerrar la Edicion"
+                        class="popup__close-button"
+                    >
+                </figure>
+            </div>
+        </figure>
     </main>
-    <script src="scripts/index.js" type="module"></script>
+    <script src="pages/index.js" type="module"></script>
 </body>
 </html>

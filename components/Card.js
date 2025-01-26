@@ -1,8 +1,9 @@
 class Card {
-    constructor(data, cardSelector) {
-        this._name = data.name
-        this._link = data.link
+    constructor({title, link}, cardSelector, handleCardClick) {
+        this._name = title
+        this._link = link
         this._cardSelector = cardSelector
+        this._handleCardClick = handleCardClick
     }
 
     _getTemplate() {
@@ -19,21 +20,9 @@ class Card {
     _handleLikeButton() {
         this._likeButton.classList.toggle("pictures__button-active");
     }
-
-    _showPopup() {
-        this._images = document.querySelector(".images");
-        this._imageTitle = this._images.querySelector(".images__paragraph");
-        this._imagePopup = this._images.querySelector(".images__content");
-
-        this._images.classList.add("images__visible");
-        
-        this._imagePopup.src = this._link;
-        this._imageTitle.textContent = this._name;
-    }
     
-    _hidePopup() {
-    this._images = document.querySelector(".images");
-        this._images.classList.remove("images__visible");
+    _handleCardClick() {
+        this._handleCardClick();
     }
 
     _setEventListeners() {
@@ -43,11 +32,8 @@ class Card {
         this._likeButton = this._element.querySelector(".pictures__button");
           this._likeButton.addEventListener("click", () => this._handleLikeButton())
         
-        this._element.querySelector(".pictures__image").addEventListener("click", () => this._showPopup());
+        this._element.querySelector(".pictures__image").addEventListener("click", () => this._handleCardClick());
     
-        this._deletePopupButton = document.querySelector(".images__close-button");
-          this._deletePopupButton.addEventListener("click", () => this._hidePopup());
-
         }
 
     getCard() {

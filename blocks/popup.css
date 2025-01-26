@@ -27,6 +27,12 @@
     flex-direction: column;
 }
 
+.popup__images-container {
+    background-color: transparent;
+    border-style: none;
+    box-shadow: none;
+}
+
 .popup__title {
     color: #000;
     font-weight: 900;
@@ -53,6 +59,20 @@
     height: 50px;
     color: #fff;
     background-color: #000;
+}
+
+.popup__content {
+    width: 90%;
+    height: 90%;
+    box-shadow: 0 0 25px #000;
+}
+
+.popup__paragraph {
+    color: rgba(255, 255, 255, 0.6);
+    width: 291px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
 }
 
 .popup__close {

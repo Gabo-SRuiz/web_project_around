@@ -74,5 +74,38 @@ Ambos cuentan con elementos privados y publicos y cada funcion o metodo hace una
 
 Tambien se creo el archivo utils.js el cual contiene los controladores de eventos, las constantes y las funciones para abrir y cerrar popups.
 
+//////////////////////////////////////////////////////////////////////////////////
+
+Proyecto 11
+TripleTen
+
+En este proyecto se distribuyeron los archivos de script en carpetas:
+    - components: Para todas las clases que se utilizan.
+    - utils: para los archivos constants.js y utils.js
+        1. constants.js: se almacenan todas las variables o constantes.
+        2. utils.js: se almacenan todas las funciones separadas de las clases.
+    - Por ultimo de agrego index.js en el directorio pages.
+
+Se crearon 5 nuevas clases las cuales son: 
+    - Section
+    - Popup
+    - PopupWithImage
+    - PopupWhitForm
+    - UserInfo
+
+Cada una consta de sus propios metodos y tienen una vinculacion debil para no depender de otras clases entre si.
+
+Section: se encarga de renderizar las tarjetas y ubicarlas en el html.
+
+Popup: Es una clase padre que sirve de guia para las clases "PopupWithImage" y "PopupWithForm".
+
+PopupWithImage: Clase hija de "Popup" que funciona para darle funcion al popup en donde se encuentra la imagen y titulo de las tarjetas; cuenta con herencia y polimorfismo.
+
+PopupWithForm: Al igual que la anterior clase se encarga de darle funcionamiento a los popups que tienen formularios; cuenta con herencia y polimorfismo
+
+UserInfo: Esta clase se encarga de recoger los datos de usuario que sean ingresados en el formulario y a su vez los coloca en la pagina..
+
+Todas las instancias de clases se crearon en el archivo index.js de manera correcta.
+
 Enlace del proyecto:
 https://gabo-sruiz.github.io/web_project_around/
