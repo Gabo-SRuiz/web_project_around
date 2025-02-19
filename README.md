@@ -107,5 +107,33 @@ UserInfo: Esta clase se encarga de recoger los datos de usuario que sean ingresa
 
 Todas las instancias de clases se crearon en el archivo index.js de manera correcta.
 
+//////////////////////////////////////////////////////////////////////////////////
+
+Proyecto 12
+TripleTen
+
+Este proyecto consta de implementaciones de clases tales como: 
+"Api.js" y "PopupWithConfirmation"
+
+Api.js contiene todos los metodos para la comunicacion con el Api, como:
+    
+- Editar el perfil
+- Conseguir los datos del usuario
+- Eliminar las tarjetas
+- Cambiar el avatar del usuario
+- Añadir tarjetas nuevas
+
+PopupWithConfirmation contiene los metodos para el nuevo popup que elimina las tarjetas.
+
+Asi mismo se implementan dos nuevos popups:
+    1. Para editar el avatar del perfil.
+    2. Para confirmar la eliminacion de la tarjeta.
+
+Se hicieron nuevas instancias en "index.js" para los nuevos popups como ajustes en las instancias para la implementacion de la clase api y asi comunicarnos con el mismo, guardar y cargar los datos.
+
+Agrega una funcionalidad nueva para el boton like de las tarjetas el cual nos permite cambiar el booleano de la clave-valor "_isLiked".
+
+Finalmente se modifican los formularios para que tenga interaccion con el usuario y le aparezca un texto de "Guardando..." mientras se estan aplicando los cambios a la pagina y/o se obtiene la respuesta del Api.
+
 Enlace del proyecto:
 https://gabo-sruiz.github.io/web_project_around/

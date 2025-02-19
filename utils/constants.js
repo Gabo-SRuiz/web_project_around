@@ -16,6 +16,9 @@ const formCard = document.querySelector("#card-form");
 const inputTitle = document.querySelector("#popup__title");
 const inputUrl = document.querySelector("#popup__url");
 const popupCard = document.querySelector("#card-popup");
+const profileAvatar = document.querySelector("#profile-avatar");
+const profilePopup = document.querySelector("#avatar-popup");
+const pencilImage = document.querySelector(".profile__image-pencil");
 
 const initialCards = [
     {
@@ -54,4 +57,7 @@ export {settings,
     inputTitle,
     inputUrl,
     initialCards,
-    popupCard}
+    popupCard,
+    profileAvatar,
+    profilePopup,
+    pencilImage}

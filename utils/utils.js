@@ -2,21 +2,28 @@ import {
   editButton, 
   popup, 
   addButton,
-  popupCard} from  "./constants.js"
+  popupCard,
+  profileAvatar,
+  profilePopup,
+  pencilImage} from  "./constants.js"
 
-function toggleForm(evt) {
+function addForm(evt) {
   if(evt.target === editButton) {
     popup.classList.toggle("popup__visible");
-  }else{
+  }else if (evt.target === addButton){
     popupCard.classList.toggle("popup__visible");
+  } else if (evt.target === profileAvatar || evt.target === pencilImage) {
+    profilePopup.classList.toggle("popup__visible");
   }
 } 
-editButton.addEventListener('click', toggleForm);
-addButton.addEventListener("click", toggleForm)
+editButton.addEventListener("click", addForm);
+addButton.addEventListener("click", addForm);
+profileAvatar.addEventListener("click", addForm);
+pencilImage.addEventListener("click", addForm);
 
 const closeModalViews = document.addEventListener("click", (evt) =>{
   if(evt.target.classList.contains("popup")){
     evt.target.classList.remove("popup__visible")
   }
 });
-  export {toggleForm, closeModalViews}
+  export {addForm, closeModalViews}

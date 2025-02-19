@@ -25,11 +25,16 @@
         </section>
 
         <section class="profile">
-            <div class="profile__avatar">
+            <div class="profile__avatar" id="profile-avatar">
                 <img
                 src="./images/Avatar.png"
                 alt="Imagen de perfil del usuario"
                 class="profile__image"
+                >
+                <img
+                src="./images/Pencil.svg"
+                alt="Lapiz de edicion"
+                class="profile__image-pencil"
                 >
             </div>
             <div class="profile__info">
@@ -97,7 +102,7 @@
                                     placeholder="Acerca de mi"
                                     class="popup__input"
                                     id="popup__description"
-                                    name="description"
+                                    name="about"
                                     required
                                     minlength="2"
                                     maxlength="200"
@@ -108,7 +113,8 @@
                                     <img 
                                         src="./images/Close Icon.svg" 
                                         alt="Boton para cerrar la Edicion"
-                                        class="popup__close-button"                                        >
+                                        class="popup__close-button"
+                                        >
                                 </figure>
                 </form>
         </div>
@@ -120,7 +126,7 @@
                                 placeholder="Titulo" 
                                 class="popup__input"
                                 id="popup__title"
-                                name="title"
+                                name="name"
                                 required
                                 minlength="2"
                                 maxlength="30"
@@ -135,7 +141,7 @@
                                 required
                             >
                             <span class="popup__error" id="popup__url-error"></span>
-                            <button type="submit" class="form__button popup__button" disabled>Crear</button>
+                            <button type="submit" class="popup__button" disabled>Crear</button>
                             <figure class="popup__close">
                                 <img 
                                     src="./images/Close Icon.svg" 
@@ -163,6 +169,43 @@
                 </figure>
             </div>
         </figure>
+
+        <div class="popup" id="delete-popup">
+            <form novalidate class="popup__container" id="delete-form">
+                    <h4 class="popup__title">¿Estás seguro?</h4>
+                            <button type="submit" class="popup__button">Sí</button>
+                            <figure class="popup__close">
+                                <img 
+                                    src="./images/Close Icon.svg" 
+                                    alt="Boton para cerrar la Edicion"
+                                    class="popup__close-button"                                        >
+                            </figure>
+            </form>
+    </div>
+
+    <div class="popup" id="avatar-popup">
+        <form novalidate class="popup__container" id="avatar-form">
+                <h4 class="popup__title">Cambiar foto de perfil</h4>
+                        <input
+                            type="url"
+                            placeholder="Enlace de avatar"
+                            class="popup__input"
+                            id="popup__avatar"
+                            name="avatar"
+                            required
+                        >
+                        <span class="popup__error" id="popup__avatar-error"></span>
+                        <button type="submit" class="popup__button" disabled>Guardar</button>
+                        <figure class="popup__close">
+                            <img 
+                                src="./images/Close Icon.svg" 
+                                alt="Boton para cerrar la Edicion"
+                                class="popup__close-button"
+                                >
+                        </figure>
+            </form>
+    </div>
+
     </main>
     <script src="pages/index.js" type="module"></script>
 </body>
